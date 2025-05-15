@@ -24,6 +24,8 @@ from prody import writePDB
 from sc_utils import Packer, pack_side_chains
 
 
+MODEL_PARAMS_DIR = "/data/galaxy4/user/share/LigandMPNN/model_params"
+
 def main(args) -> None:
     """
     Inference function
@@ -693,31 +695,31 @@ if __name__ == "__main__":
     argparser.add_argument(
         "--checkpoint_protein_mpnn",
         type=str,
-        default="./model_params/proteinmpnn_v_48_020.pt",
+        default=f"{MODEL_PARAMS_DIR}/proteinmpnn_v_48_020.pt",
         help="Path to model weights.",
     )
     argparser.add_argument(
         "--checkpoint_ligand_mpnn",
         type=str,
-        default="./model_params/ligandmpnn_v_32_010_25.pt",
+        default=f"{MODEL_PARAMS_DIR}/ligandmpnn_v_32_010_25.pt",
         help="Path to model weights.",
     )
     argparser.add_argument(
         "--checkpoint_per_residue_label_membrane_mpnn",
         type=str,
-        default="./model_params/per_residue_label_membrane_mpnn_v_48_020.pt",
+        default=f"{MODEL_PARAMS_DIR}/per_residue_label_membrane_mpnn_v_48_020.pt",
         help="Path to model weights.",
     )
     argparser.add_argument(
         "--checkpoint_global_label_membrane_mpnn",
         type=str,
-        default="./model_params/global_label_membrane_mpnn_v_48_020.pt",
+        default=f"{MODEL_PARAMS_DIR}/global_label_membrane_mpnn_v_48_020.pt",
         help="Path to model weights.",
     )
     argparser.add_argument(
         "--checkpoint_soluble_mpnn",
         type=str,
-        default="./model_params/solublempnn_v_48_020.pt",
+        default=f"{MODEL_PARAMS_DIR}/solublempnn_v_48_020.pt",
         help="Path to model weights.",
     )
 
@@ -933,7 +935,7 @@ if __name__ == "__main__":
     argparser.add_argument(
         "--checkpoint_path_sc",
         type=str,
-        default="./model_params/ligandmpnn_sc_v_32_002_16.pt",
+        default=f"{MODEL_PARAMS_DIR}/ligandmpnn_sc_v_32_002_16.pt",
         help="Path to model weights.",
     )
 

@@ -140,7 +140,7 @@ python run.py \
 
 #20
 python run.py \
-        --checkpoint_ligand_mpnn "./model_params/ligandmpnn_v_32_005_25.pt" \
+        --checkpoint_ligand_mpnn "/data/galaxy4/user/share/LigandMPNN/model_params/ligandmpnn_v_32_005_25.pt" \
         --model_type "ligand_mpnn" \
         --seed 111 \
         --pdb_path "./inputs/1BC8.pdb" \
